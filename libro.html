@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de JavaScript</title>
+</head>
+<body>
+    <script>
+        // Infinity y -Infinity
+        console.log("Infinity y -Infinity:");
+        console.log(Infinity);  // Representa un número mayor que cualquier otro número
+        console.log(-Infinity); // Representa un número menor que cualquier otro número
+        console.log(Infinity - 1); // Sigue siendo Infinity, ya que restar 1 no afecta a Infinity
+
+        // Tres tipos de string
+        console.log("\nTres tipos de String:");
+        let string1 = "HOLA MUNDO";  // String con comillas dobles
+        let string2 = 'HOLA MUNDO'; // String con comillas simples
+        let string3 = `HOLA MUNDO`; // String con template literals (permite incluir expresiones)
+        console.log(string1);
+        console.log(string2);
+        console.log(string3);
+
+        // Operadores unarios
+        console.log("\nOperadores Unarios:");
+        let x = 5;
+        console.log(-x); // El operador unario negativo convierte 5 en -5
+
+        // Valores Booleanos
+        console.log("\nValores Booleanos:");
+        console.log(true);  // Muestra el valor booleano verdadero
+        console.log(false); // Muestra el valor booleano falso
+
+        // Operadores lógicos
+        console.log("\nOperadores Lógicos:");
+        console.log(true && false);  // AND lógico: retorna true si ambos son true, aquí retorna false
+        console.log(true || false);  // OR lógico: retorna true si al menos uno es true, aquí retorna true
+
+        // Valores vacíos
+        console.log("\nValores Vacíos:");
+        console.log(null);      // null representa la ausencia intencional de cualquier valor
+        console.log(undefined); // undefined representa una variable que ha sido declarada pero no tiene valor asignado
+
+        // Conversión de tipo automática
+        console.log("\nConversión de Tipo Automática:");
+        console.log('5' * 2);   // Convierte el string '5' en número y luego multiplica, resultado es 10
+        console.log('5' + 2);   // No convierte a número, realiza concatenación, resultado es '52'
+
+        // Corto circuito de operadores lógicos
+        console.log("\nCorto Circuito de Operadores Lógicos:");
+        console.log(false && 'Hola'); // No evalúa 'Hola' porque false && cualquier cosa siempre es false
+        console.log(true || 'Hola');  // No evalúa 'Hola' porque true || cualquier cosa siempre es true
+
+        // Expresiones y declaraciones
+        console.log("\nExpresiones y Declaraciones:");
+        let expr = 3 + 4; // Esto es una expresión que se evalúa a 7
+        console.log(expr);
+
+        // Vinculaciones
+        console.log("\nVinculaciones:");
+        let nombre = "Juan"; // Declaración de una variable y vinculación a un valor
+        console.log(nombre);  // Muestra "Juan"
+
+        // Nombres vinculantes
+        console.log("\nNombres Vinculantes:");
+        let $dollar = "Moneda"; // Se puede usar $ al inicio del nombre de una variable
+        let _underscore = "Subrayado"; // Se puede usar _ al inicio del nombre de una variable
+        console.log($dollar);
+        console.log(_underscore);
+
+        // Funciones
+        console.log("\nFunciones:");
+        function suma(a, b) {
+            return a + b; // Suma dos números y retorna el resultado
+        }
+        console.log(suma(5, 7)); // Llama a la función suma con 5 y 7, retorna 12
+
+        // La función console.log
+        console.log("\nLa función console.log:");
+        console.log("Esto es un mensaje en la consola usando console.log"); // Muestra el mensaje en la consola
+
+        // Valores de retorno
+        console.log("\nValores de Retorno:");
+        function cuadrado(x) {
+            return x * x; // Retorna el cuadrado de un número
+        }
+        console.log(cuadrado(4)); // Muestra 16, que es el cuadrado de 4
+
+        // Flujo de control
+        console.log("\nFlujo de Control:");
+        let numero = 10;
+        if (numero > 5) {  // Si numero es mayor que 5, ejecuta este bloque
+            console.log("Número es mayor que 5");
+        } else {           // Si no, ejecuta este bloque
+            console.log("Número es 5 o menor");
+        }
+
+        // Ejecución condicional
+        console.log("\nEjecución Condicional:");
+        let condicional = 20;
+        if (condicional > 10) {  // Si condicional es mayor que 10, ejecuta el bloque
+            console.log("Condición verdadera");
+        }
+
+        // Ciclos while y do
+        console.log("\nCiclos While y Do:");
+        let count = 0;
+        while (count < 3) {  // Mientras count sea menor que 3, ejecuta este bloque
+            console.log("While loop, count:", count);
+            count++;
+        }
+
+        count = 0;
+        do {
+            console.log("Do While loop, count:", count); // Se ejecuta al menos una vez
+            count++;
+        } while (count < 3);
+
+        // Indentando Código
+        console.log("\nIndentando Código:");
+        for (let i = 0; i < 3; i++) {
+            console.log("Código indentado, i:", i); // Muestra cómo el código indentado es más legible
+        }
+
+        // Ciclos for
+        console.log("\nCiclos For:");
+        for (let i = 0; i < 3; i++) {
+            console.log("For loop, i:", i); // Bucle for simple, itera 3 veces
+        }
+
+        // Rompiendo un ciclo
+        console.log("\nRompiendo un Ciclo:");
+        for (let i = 0; i < 5; i++) {
+            if (i === 3) break; // Rompe el ciclo cuando i es igual a 3
+            console.log("Ciclo roto en", i);
+        }
+
+        // Actualizando vinculaciones de manera sucinta
+        console.log("\nActualizando Vinculaciones de Manera Sucinta:");
+        let numero2 = 10;
+        numero2 += 5; // Incrementa numero2 en 5 de forma concisa
+        console.log(numero2); // Muestra 15
+
+        // Despachar en un valor con switch
+        console.log("\nDespachar en un Valor con Switch:");
+        let color = "rojo";
+        switch (color) {
+            case "rojo":
+                console.log("El color es rojo"); // Si color es "rojo", ejecuta este bloque
+                break;
+            case "azul":
+                console.log("El color es azul"); // Si color es "azul", ejecuta este bloque
+                break;
+            default:
+                console.log("Color no reconocido"); // Si no coincide con ninguno, ejecuta esto
+        }
+
+        // Capitalización
+        console.log("\nCapitalización:");
+        let palabra = "javascript";
+        let palabraCap = palabra.charAt(0).toUpperCase() + palabra.slice(1); // Capitaliza la primera letra
+        console.log(palabraCap); // Muestra "Javascript"
+
+        // Comentarios
+        console.log("\nComentarios:");
+        // Este es un comentario de una sola línea
+        /* Este es un comentario
+           de varias líneas */
+        console.log("Comentarios agregados");
+    </script>
+</body>
+</html>
